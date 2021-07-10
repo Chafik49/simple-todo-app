@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    padding: 20px;
+    max-width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    border: 3px solid rgb(194, 191, 191);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgb(175, 175, 175);
+    
+    
+}
+.container > h3 {
+    color: gray;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(228, 228, 228);
+    padding: 20px;
+    border-radius: 10px;
+    height: 80px;
+}
+
+.header .input {
+    width: 250px;
+    /* height: 30px; */
+    margin-right: 10px;
+    border:none;
+    outline: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+    
+    
+}
+
+.header .input:focus {
+    border: 2px solid green;
+}
+
+.btn {
+    color: white;
+    padding: 10px 10px;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    /* border: 1px solid gray; */
+}
+.create-btn {
+    background-color: rgb(10, 224, 10);
+    
+}
+.create-btn:hover {
+    background-color: rgb(7, 199, 7);
+}
+.clear-btn {
+    background-color: rgb(255, 40, 40);
+}
+
+.clear-btn:hover {
+    background-color: rgb(219, 3, 3);
+}
+.list-zone {
+    /* padding: 10px; */
+    position: relative;
+}
+
+.list-zone li {
+    margin-top:20px ;
+    margin-bottom:20px ;
+    background-color: rgba(241, 239, 239, 0.979);
+    padding: 15px;
+    list-style: none;
+    /* border-radius: 10px; */
+    border-left: 8px solid yellow;
+    transition: all .3s ease;
+
+
+}
+.list-zone li::first-letter {
+    text-transform: capitalize;
+}
+.list-zone li:first-of-type::after {
+    content: "";
+    background-color: yellow;
+    padding: 8px;
+    position: absolute;
+    right: 18px;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+@media (max-width:767px) {
+    .container {
+        max-width: 300px;
+    }
+    .header {
+        flex-wrap: wrap;
+        background-color: white;
+        height: fit-content;
+        justify-content: center;
+        margin: 0 auto
+    }
+    .header .input {
+        border: 1px solid gray;
+        margin-bottom: 20px;
+    }
+}
+
+.box > div {
+    margin-top:20px ;
+    margin-bottom:20px ;
+    background-color: rgba(241, 239, 239, 0.979);
+    padding: 15px;
+    list-style: none;
+    /* border-radius: 10px; */
+    border-left: 8px solid yellow;
+    transition: all .3s ease;
+}
+
+div.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .3s ease;
+}
+.delt-btn {
+    background-color: red;
+}
+.delt-btn:hover {
+    background-color: rgb(204, 4, 4);
+}
+.done-btn {
+    background-color: rgb(7, 204, 7);
+}
+.done-btn:hover {
+    background-color: rgb(4, 165, 4);
+}
+.mission {
+    font-size: 20px;
+
+}
+.mission::first-letter {
+    text-transform: capitalize;
+}
+
+.doneTask {
+    text-decoration: line-through;
+    color: gray;
+    transition: all .3s ease;
+
+}
